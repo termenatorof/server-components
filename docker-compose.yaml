@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: server_components_app
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_PORT=8080
+    restart: unless-stopped
